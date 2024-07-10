@@ -1,0 +1,474 @@
+:root {
+  --lightColor: rgba(255, 255, 255, 0.6);
+  --whiteColor: white;
+  --blackColor: rgba(0, 0, 0, 0.404);
+  --textColor: #535150fc;
+  --background-color: #f8f9fa;
+  --dangerColor: #ff0000;
+  --yellowcolor: #eec60a;
+  --darkcolor:rgba(0, 0, 0, 0.8);
+  --gallerycolor:rgba(255, 255, 255, 0.392);
+  --btnboxcolor:rgba(0, 0, 0, 15%);
+  --background-colorbox:rgb(233, 9, 9);
+}
+
+/* COMMON PROPERTIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.py {
+  padding: 100px 0;
+}
+.py-120{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.pt{
+  padding-top: 100px;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+li {
+  list-style: none;
+}
+.d-flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.text-center {
+  text-align: center;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.w-1 {
+  width: 100%;
+}
+.w-2 {
+  width: 50%;
+}
+.w-3 {
+  width: 33.33%;
+}
+.w-4 {
+  width: 25%;
+}
+.w-5 {
+  width: 20%;
+}
+
+/* HEADER */
+
+header {
+  padding: 20px;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+}
+
+.logo {
+  color: var(--whiteColor);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+nav ul li a {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 20px;
+  color: var(--lightColor);
+}
+nav ul li:first-child a {
+  color: var(--whiteColor);
+}
+.menu{
+  position: relative;
+}
+.dropdawn-menu{
+  width: 175px;
+  height: auto;
+  background-color: var(--blackColor);
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  left: -15%;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+nav ul li:hover .dropdawn-menu , .menu ul li:hover .sub-dropdawn{
+  opacity: 1;
+  visibility: visible;
+  top: 35px;
+}
+.dropdawn-menu li:hover a{
+  color: var(--dangerColor);
+}
+
+.dropdawn-menu li a{
+  padding: 5px;
+  transition: all 0.6s;
+}
+.sub-dropdawn{
+  width: 175px;
+  height: auto;
+  background-color: var(--blackColor);
+  padding: 10px;
+  position: absolute;
+  top: 1px !important;
+  left: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+.sub-dropdawn li a{
+  color: var(--lightColor) !important;
+  font-weight: 300;
+  transition: all 0.6s;
+}
+.sub-dropdawn li:hover a{
+  color: var(--dangerColor) !important;
+}
+.m-text{
+  margin-left: 40px;
+}
+.up-aerrow{
+  position: absolute;
+  top: -18%;
+  font-size: 45px;
+}
+
+/* BANNER */
+
+.banner {
+  background-image: url("../images/banner.webp");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  background-color: var(--blackColor);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner-content {
+  color: var(--whiteColor);
+  z-index:1;
+}
+
+.banner-content h1 {
+  font-size: 64px;
+}
+
+.banner-content p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+/* OUR ROOMS */
+.Our-rooms {
+  background-color: var(--background-color);
+}
+.rooms-title h2,.about-content h2 , .Features-title h2 , .gallery-title h2 ,
+ .events-tatle h2 , .reviw-tatle h2{
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 48px;
+  font-weight: 200;
+  
+}
+.rooms-title h2::after , .about-content h2::after , .Features-title H2::after ,
+ .gallery-title h2::after , .events-tatle h2::after , .reviw-tatle h2::after{
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 1px;
+  background-color:var(--blackColor);
+  transform: translate(-50%);
+  left: 50%;
+  bottom: -10px;
+}
+.room-items .room-images img {
+  max-width: 100%;
+  display: block;
+  transition: all 0.4s linear;
+}
+.room-container {
+  padding: 30px 0;
+  transition: all 0.5s linear;
+}
+
+.room-items {
+  margin: 20px 10px;
+  background-color: var(--whiteColor);
+}
+
+.room-images {
+  overflow: hidden;
+}
+
+.room-items:hover .room-images img {
+  transform: scale(1.1);
+}
+.room-items:hover .room-container {
+  box-shadow: 2px 2px 10px 2px gray;
+}
+
+.room-container h3 {
+  font-weight: 500;
+}
+
+.room-container p {
+  color: var(--textColor);
+}
+
+/* ABOUT US */
+
+.about-images {
+  background-image: url(../images/r2.webp);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  position: relative;
+}
+
+.about-images::after {
+  background-image: url(../images/r1.webp);
+  width: 250px;
+  height: 150px;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  border: 8px solid var(--whiteColor);
+}
+.play-btn{
+  content: "";
+  color: var(--whiteColor);
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  position: absolute;
+}
+.about-content {
+  margin-left: 100px;
+}
+
+
+.about-content p {
+  margin: 30px 0;
+}
+
+.about-content a {
+  color: var(--dangerColor);
+}
+
+.about-content .right-arrow {
+  font-weight: 800;
+  margin-left: 5px;
+}
+
+.about-content h2::after{
+bottom: 0;
+left: 50px;
+}
+
+/* Features */
+.Features-img h3{
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 70px;
+}
+ /* COUNE */
+.count-img{
+  background-image: url(../images/count.webp);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+.count-img::after{
+  content:'';
+  width: 100%;
+  height: 100%;
+  background-color: var(--blackColor);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.counter-content h2{
+  color: var(--whiteColor);
+  font-size: 38px;
+  font-weight: 300;
+}
+.btm{
+  color: var(--whiteColor);
+  border: 2px solid var(--yellowcolor);
+  padding: 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.btm:hover{
+  background-color: var(--yellowcolor);
+}
+.counter-list{
+  color: var(--whiteColor);
+}
+.counter-list p{
+  letter-spacing: 2px;
+  white-space: 3px;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.counter-list ul li{
+ font-size: 30px;
+}
+.counter-list ul li samp{
+  font-size: 15px;
+}
+/* gallery */
+.gallery-img img{
+  display: block;
+}
+.gallery-img{
+  position: relative;
+}
+.gallery-img::after{
+  content: '';
+  background-color: var(--gallerycolor);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border: 0;
+  opacity: -1;
+  position: absolute;
+  transition: all 0.3s initial; 
+}
+.gallery-img:hover::after{
+  opacity: 1;
+  cursor: zoom-in;
+}
+/* Events */
+
+.events-img{
+  padding: 50px;
+}
+.events-img h3{
+  font-weight: 100;
+  margin-top: 10px;
+}
+.events-img a{
+  color: var(--dangerColor);
+  margin-bottom: 10px;
+}
+.events-img h6{
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--textColor);
+}
+.events-img p{
+  color: var(--textColor);
+  font-size: 15px;
+}
+/* REVIEW */
+.review-item{
+  padding: 50px;
+}
+.review-img img{
+  border-radius: 20px;
+  padding: 15px;
+}
+.review-content h3{
+  font-weight: 500;
+}
+.review-content p{
+  color: var(--textColor);
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer{
+  background-color: var(--darkcolor);
+  padding-bottom: 50px;  
+}
+.about-menu p{
+  color: var(--lightColor);
+  padding-bottom: 10px;
+
+}
+.btn-2{
+  background-color: var(--dangerColor);
+  padding: 10px 30px;
+  border-color: var(--dangerColor);
+  border-radius: 30px;
+  border: none;
+  transition: all 0.2s;
+}
+.btn-2:hover{
+  box-shadow: 4px 6px var(--btnboxcolor);
+  background-color: var(--background-colorbox);
+}
+.btn-2 a{
+color: var(--whiteColor);
+font-weight: 400;
+}
+.footet-tatle h3{
+  margin: 50px 0;
+  
+  color: var(--whiteColor);
+}
+.footer-list li a{
+  margin: 10px;
+  color: var(--lightColor);
+  transition: all 0.3s;
+}
+.footer-list li:hover a, .footer-icon a:hover{
+  color: var(--whiteColor);
+}
+.footer-icon a{
+  padding: 3px;
+  color: var(--lightColor);
+  transition: all 0.4s;
+  font-size: 25px;
+}
+.Copyright p{
+  color: var(--lightColor);
+  margin: 50px;
+}
+.Copyright p i{
+  color: var(--dangerColor);
+}
